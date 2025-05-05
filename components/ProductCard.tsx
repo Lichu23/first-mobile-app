@@ -2,10 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Animated, Image, StyleSheet, Text, View } from "react-native";
 import { ProductSummary } from "../types/product";
 
-interface Props {
-  product: ProductSummary;
-}
-
 interface PropsAnimated {
   product: ProductSummary;
   index: number;
@@ -30,7 +26,7 @@ export function AnimatedProductCard({ product, index }: PropsAnimated) {
         source={{ uri: product.image }}
         style={styles.image}
       />
-      <Text style={{ fontSize: 20 }}>{product.title}</Text>
+      <Text className="font-mono">{product.title}</Text>
     </Animated.View>
   );
 }
